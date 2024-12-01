@@ -1,0 +1,100 @@
+﻿@model GAD_SISTEMA.Models.User
+<body>
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Nuevo Usuario</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="">Usuario</a></li>
+                    <li class="breadcrumb-item">Nuevo Usuario</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Registro del usuario nuevo</h5>
+
+                            <!-- FORMULARIO -->
+                            @using (Html.BeginForm("Create", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row mb-3">
+                                    @Html.LabelFor(model => model.Nombres, new { @class = "col-sm-2 col-form-label" })
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(model => model.Nombres, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    @Html.LabelFor(model => model.Apellidos, new { @class = "col-sm-2 col-form-label" })
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(model => model.Apellidos, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Apellidos, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    @Html.LabelFor(model => model.Telefono, new { @class = "col-sm-2 col-form-label" })
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(model => model.Telefono, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    @Html.LabelFor(model => model.UserName, "Correo", new { @class = "col-sm-2 col-form-label" })
+                                    <div class="col-sm-10">
+                                        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", type = "email" })
+                                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    @Html.LabelFor(model => model.Password, new { @class = "col-sm-2 col-form-label" })
+                                    <div class="col-sm-10">
+                                        @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    @Html.LabelFor(model => model.ConfirmPassword, new { @class = "col-sm-2 col-form-label" })
+                                    <div class="col-sm-10">
+                                        @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    @Html.LabelFor(model => model.FotoFile, "Foto de perfil", new { @class = "col-sm-2 col-form-label" })
+                                    <div class="col-sm-10">
+                                        <input type="file" name="FotoFile" class="form-control" />
+                                        @Html.ValidationMessageFor(model => model.FotoFile, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-10">
+                                        <button type="submit" class="btn btn-primary">Registrar usuario</button>
+                                    </div>
+                                </div>
+                            }
+                            <!-- End General Form Elements -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+
+</body>
