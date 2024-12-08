@@ -20,7 +20,7 @@ body {
 }
 
 a {
-  color: #4154f1;
+  color: rgba(82, 63, 105, 0.2);
   text-decoration: none;
 }
 
@@ -71,17 +71,17 @@ h6 {
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  background: #4154f1;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    background: #108a03;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
 }
 
 .back-to-top i {
@@ -340,16 +340,16 @@ h6 {
   color: #2c384e;
 }
 
-.nav-tabs-bordered .nav-link:hover,
-.nav-tabs-bordered .nav-link:focus {
-  color: #4154f1;
-}
+    .nav-tabs-bordered .nav-link:hover,
+    .nav-tabs-bordered .nav-link:focus {
+        color: #108a03;
+    }
 
-.nav-tabs-bordered .nav-link.active {
-  background-color: #fff;
-  color: #4154f1;
-  border-bottom: 2px solid #4154f1;
-}
+    .nav-tabs-bordered .nav-link.active {
+        background-color: #fff;
+        color: #108a03;
+        border-bottom: 2px solid #108a03;
+    }
 
 /*--------------------------------------------------------------
 # Header
@@ -360,13 +360,13 @@ h6 {
 
 @media (min-width: 1200px) {
   .logo {
-    width: 280px;
+    width: 260px;
   }
 }
 
 .logo img {
-  max-height: 26px;
-  margin-right: 6px;
+  max-height: 52px;
+  margin-right: 20px;
 }
 
 .logo span {
@@ -387,12 +387,12 @@ h6 {
   /* Search Bar */
 }
 
-.header .toggle-sidebar-btn {
-  font-size: 32px;
-  padding-left: 10px;
-  cursor: pointer;
-  color: #012970;
-}
+    .header .toggle-sidebar-btn {
+        font-size: 32px;
+        padding-left: 10px;
+        cursor: pointer;
+        color: #108a03;
+    }
 
 .header .search-bar {
   min-width: 360px;
@@ -466,15 +466,16 @@ h6 {
   padding: 0;
 }
 
+/*Icono de desplegar menu de usuario*/
 .header-nav .nav-icon {
-  font-size: 22px;
-  color: #012970;
-  margin-right: 25px;
-  position: relative;
+    font-size: 22px;
+    color: #108a03;
+    margin-right: 25px;
+    position: relative;
 }
 
 .header-nav .nav-profile {
-  color: #012970;
+    color: #108a03;
 }
 
 .header-nav .nav-profile img {
@@ -589,10 +590,10 @@ h6 {
   font-size: 18px;
   line-height: 0;
 }
-
-.header-nav .profile .dropdown-item:hover {
-  background-color: #f6f9ff;
-}
+/*color del hover del menu de usuario*/
+    .header-nav .profile .dropdown-item:hover {
+        background-color: #f6f9ff;
+    }
 
 /*--------------------------------------------------------------
 # Sidebar
@@ -684,18 +685,18 @@ h6 {
   align-items: center;
   font-size: 15px;
   font-weight: 600;
-  color: #4154f1;
+  color: #108a03;
   transition: 0.3;
   background: #f6f9ff;
   padding: 10px 15px;
   border-radius: 4px;
 }
 
-.sidebar-nav .nav-link i {
-  font-size: 16px;
-  margin-right: 10px;
-  color: #4154f1;
-}
+    .sidebar-nav .nav-link i {
+        font-size: 16px;
+        margin-right: 10px;
+        color: #108a03;
+    }
 
 .sidebar-nav .nav-link.collapsed {
   color: #012970;
@@ -705,15 +706,15 @@ h6 {
 .sidebar-nav .nav-link.collapsed i {
   color: #899bbd;
 }
-
-.sidebar-nav .nav-link:hover {
-  color: #4154f1;
-  background: #f6f9ff;
-}
-
-.sidebar-nav .nav-link:hover i {
-  color: #4154f1;
-}
+    /*color: #108a03; color del menu lateral izquierdo*/
+    .sidebar-nav .nav-link:hover {
+        color: #108a03;
+        background: #f6f9ff;
+    }
+/*color del icono al lado del menu*/
+        .sidebar-nav .nav-link:hover i {
+            color: #108a03;
+        }
 
 .sidebar-nav .nav-link .bi-chevron-down {
   margin-right: 0;
@@ -748,14 +749,14 @@ h6 {
   border-radius: 50%;
 }
 
-.sidebar-nav .nav-content a:hover,
-.sidebar-nav .nav-content a.active {
-  color: #4154f1;
-}
+    .sidebar-nav .nav-content a:hover,
+    .sidebar-nav .nav-content a.active {
+        color: #108a03;
+    }
 
-.sidebar-nav .nav-content a.active i {
-  background-color: #4154f1;
-}
+        .sidebar-nav .nav-content a.active i {
+            background-color: #108a03;
+        }
 
 /*--------------------------------------------------------------
 # Dashboard

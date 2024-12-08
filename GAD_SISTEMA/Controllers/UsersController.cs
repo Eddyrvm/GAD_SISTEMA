@@ -73,6 +73,7 @@ namespace GAD_SISTEMA.Controllers
 
             return View(user);
         }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

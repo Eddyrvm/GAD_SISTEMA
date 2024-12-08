@@ -34,7 +34,7 @@
                 Session["UserId"] = user.UserId;
                 Session["UserName"] = user.UserName;
                 Session["UsuarioLogin"] = user.UsuarioLogin;
-                Session["FotoUsuario"] = user.Foto ?? "~/Content/img/profile-img.jpg";
+                Session["Foto"] = user.Foto ?? "~/Content/img/profile-img.jpg";
 
                 return RedirectToAction("Index", "Home");
             }
@@ -49,7 +49,8 @@
         public ActionResult Logout()
         {
             Session.Clear();
-            return RedirectToAction("Login");
+            Session.Abandon();
+            return RedirectToAction("Index", "Home");
         }
         protected override void Dispose(bool disposing)
         {
